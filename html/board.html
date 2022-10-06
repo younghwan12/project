@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+
+    <link rel="stylesheet" href="../asset/css/reset.css">
+    <link rel="stylesheet" href="../asset/css/common.css">
+    <link rel="stylesheet" href="../asset/css/header.css">
+    <style>
+        .lB__inner {
+            margin-top: 140px;
+            padding: 0 450px;
+            display: flex;            
+            font-size: 20px;  
+            line-height: 60px;
+            flex-wrap: nowrap;
+        }
+        .lB__inner figure {
+            display: flex;
+            flex-wrap: nowrap;
+            color: #6CC4B3;
+            margin-right: 60px;
+        }
+        .lB__inner img {
+            width: 60px;
+            height: 60px;
+            margin-right: 13px;
+        }
+        .Myprofile {
+            display: flex;
+            font-size: 16px;         
+        }
+        .Myprofile > p {
+            margin-right: 20px;
+            color: #757575;
+            box-sizing: border-box;
+            text-decoration: underline 1px dashed #6CC4B3;
+            text-underline-position:under;
+        }
+        /* imageType */
+        .imageType {
+            margin-top: 100px;
+            width: 100%;
+        }
+        .imageType__inner {
+            text-align: center;
+            margin-bottom: 100px;
+        }
+        .imageType__inner h2 {
+            font-size: 16px;
+            color: #6cc4b3;
+        }
+        .imageType__inner p {
+            font-size: 30px;
+            color: #757575;
+            margin-bottom: 10px;
+        }
+        /* boardType */
+        .board__inner {
+            border-top: 1px dashed #6CC4B3;
+        }
+        .Option {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .Option:first-child select {
+            margin-right: 20px;
+        }
+        .Option select {
+            width: 325px;
+            padding: 8px 20px;
+            font-family: inherit;
+            background: url(../asset/img/arrow.png) no-repeat 95% 50%; /* 네이티브 화살표 대체 */  
+            border: 1px solid #6CC4B3; 
+            border-radius: 25px;
+            font-size: 20px;
+            color: #6cc4b3;
+            -webkit-appearance: none; 
+            -moz-appearance: none;
+            appearance: none;
+        }
+        .board_ranking {
+            margin-top: 50px;
+        }
+        .board_ranking h3 {
+            padding-bottom: 5px;
+            font-size: 24px;
+            font-weight: 200;
+            color: #6cc4b3;
+            border-bottom: 1px solid #757575;
+        }
+        .ranking__inner {
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 5px 5px 3px 1px #f5f5f5;        
+        }
+        .ranking__inner span {
+            padding-top: 20px;
+            font-size: 20px;
+        }
+        .weekBest {
+            margin-right: 30px;
+        }
+        .MonthBest {
+            margin-left: 30px;
+            color: #6cc4b3;
+        }
+        .ranking__inner table {
+            width: 100%;
+            margin-top: 30px;
+        }
+        .borad__table {
+            width: 100%;
+            padding: 20px;
+            margin-top: 0 50px 0 0;
+            text-align: center;
+        }
+        .table {
+            width: 100%;
+        }
+        .table tr td:first-child {
+            text-align-last: left;            
+        }
+        .table thead {
+            color: #6cc4b3;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .borad__table td {
+            padding: 10px 5px;
+        }
+        .borad__pages {
+            margin: 40px 0;
+        }
+        .borad__pages ul {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;            
+        }
+        .borad__pages ul li a {
+            padding: 13px 10px;
+            color: #505050;          
+        }
+        .borad__pages ul li.active a {
+            color: #6CC4B3;
+        }
+        .search__box {
+            text-align: center;
+            border-radius: 15px;
+            position: relative;
+        }
+        .search-txt {
+            width: 500px;
+        }
+        .search-btn {
+            font-size: 15px;
+            color: #6cc4b3;
+            background-color: #fff;
+        }
+        /* footer */
+        .footer {
+            margin-top: 50px;
+            background-color: #ccc;
+            height: 200px;
+        }
+        .footer h5 {
+            text-align: center;
+            font-size: 50px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header id="headerType" class="header__wrap nexon">
+        <div class="header__inner">
+            <div class="header__logo">
+                <a href="#">winimal</a>
+            </div>
+            <nav class="header__menu">
+                <ul>
+                    <li><a href="#">A.hopsital</a></li>
+                    <li><a href="#">disease</a></li>
+                    <li><a href="#">community</a></li>
+                    <li><a href="#">pet shop</a></li>
+                    <li class="login"><a href="#">LOGIN</a></li>
+                </ul>
+            </nav>                
+        </div>
+    </header>
+    
+    <section id="loginBanner" class="loginBanner">
+        <h2 class="blind">dd</h2>
+        <div class="lB__inner">
+            <figure class="MyprofileL">
+                <img src="../asset/img/profile.png" alt="프로필">
+                <p>누군가님 어서오세요!</p>
+            </figure>            
+            <div class="Myprofile">
+                <p>최근 접속 기록 : 00/ 00/ 00</p>
+                <p>나의 정보</p>
+                <p>나의 반려견</p>
+                <p>나의 글 : 00개</p>
+                <p>댓글 수 : 00개</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="imageType" class="imageType">
+        <div class="imageType__inner">
+            <h2>COMMUNITY</h2>
+            <p>위니멀 커뮤니티에서 다양한 사람들과 좋은 정보를 나눠보세요!</p>
+            <figure>
+                <img src="../asset/img/img01.jpg" alt="">
+            </figure>
+        </div>
+
+    </section>
+
+    <section id="boardType" class="boardType container">
+        <div class="board__inner">
+            <div class="Option">
+                <select name="searchOption" id="searchOption1">
+                    <option value="Category">Category</option>
+                </select>
+                <select name="searchOption" id="searchOption2">
+                    <option value="Date">날짜선택</option>
+                </select>
+            </div>
+            <div class="board_ranking">
+                <h3>BEST Ranking</h3>
+                <div class="ranking__inner">
+                    <span class="weekBest">주간 인기글</a></span><em>|</em><span class="MonthBest">월간 인기글</span>
+                    <table>
+                        <colgroup>
+                            <col style="width: 85%">
+                            <col style="width: 15%; text-align: right;">
+                        </colgroup>
+                        <tr>
+                            <td>1. Lorem Ipsum is simply dummy text of the printing and typesetting industry. simply dummy text of the printing.</td>
+                            <td>누군가 님 2022 / 10 / 05</td>
+                        </tr>
+                        <tr>
+                            <td>1. Lorem Ipsum is simply dummy text of the printing and typesetting industry. simply dummy text of the printing.</td>
+                            <td>누군가 님 2022 / 10 / 05</td>
+                        </tr>
+                        <tr>
+                            <td>1. Lorem Ipsum is simply dummy text of the printing and typesetting industry. simply dummy text of the printing.</td>
+                            <td>누군가 님 2022 / 10 / 05</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="borad__table">
+                <table class="table">
+                    <colgroup>
+                        <col style="width: 80%">
+                        <col style="width: 10%">
+                        <col style="width: 10%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>제목</th>
+                            <th>글쓴이</th>
+                            <th>글쓴날짜</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1. Lorem Ipsum is simply dummy text of the printing and typesetting industry. simply dummy text of the printing.</td>
+                            <td>이영환</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1. Lorem Ipsum is simply dummy text of the printing and typesetting industry. simply dummy text of the printing.</td>
+                            <td>이영환</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>1. Lorem Ipsum is simply dummy text of the printing and typesetting industry. simply dummy text of the printing.</td>
+                            <td>이영환</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>1. Lorem Ipsum is simply dummy text of the printing and typesetting industry. simply dummy text of the printing.</td>
+                            <td>이영환</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>1. Lorem Ipsum is simply dummy text of the printing and typesetting industry. simply dummy text of the printing.</td>
+                            <td>이영환</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>1. Lorem Ipsum is simply dummy text of the printing and typesetting industry. simply dummy text of the printing.</td>
+                            <td>이영환</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>1. Lorem Ipsum is simply dummy text of the printing and typesetting industry. simply dummy text of the printing.</td>
+                            <td>이영환</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>1. Lorem Ipsum is simply dummy text of the printing and typesetting industry. simply dummy text of the printing.</td>
+                            <td>이영환</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>1. Lorem Ipsum is simply dummy text of the printing and typesetting industry. simply dummy text of the printing.</td>
+                            <td>이영환</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>1. Lorem Ipsum is simply dummy text of the printing and typesetting industry. simply dummy text of the printing.</td>
+                            <td>이영환</td>
+                            <td>10</td>
+                        </tr>
+                    </tbody>
+                </table>                
+            </div>
+            <div class="borad__pages">
+                <ul>
+                    <li><a href="#">&lt;</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&gt;</a></li>
+                    <li class="write"><a href="#">글쓰기</a></li>
+                </ul>                    
+            </div>
+            <div class="search__box">
+                <form action="." method="post">
+                  <input class="search-txt" type="text" placeholder="...">
+                  <button class="search-btn" type="submit">search</button>
+                </form>
+              </div>
+        </div>
+    </section>
+</body>
+<footer id="footer" class="footer">
+    <h5>푸터일시다</h5>
+</footer>
+</html>

@@ -19,7 +19,7 @@
 
 .container {
     width: 100%;
-    max-width: 1160px;
+    max-width: 1360px;
     padding: 20px;
     margin: 0 auto;
     box-sizing: border-box;
@@ -92,7 +92,7 @@
     font-weight: 500;
 }
 .score {
-    font-family: 'SCoreDream';
+    font-family: "SCoreDream";
     font-weight: 400;
 }
 
