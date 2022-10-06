@@ -91,6 +91,10 @@
     font-family: "GmarketSans";
     font-weight: 500;
 }
+.score {
+    font-family: 'SCoreDream';
+    font-weight: 400;
+}
 
 /* 배경 */
 .gray {
