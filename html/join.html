@@ -19,33 +19,38 @@
             <form action="joinSave.php" name="join" method="post">
                 <fieldset>
                     <legend class="blind">회원가입</legend>
-                </fieldset>
-                <div class="join__box">
-                    <h3>Information</h3>
-                    <div>
-                        <label class="blind" for="youEmail">ID</label>
-                        <input type="email" id="youEmail" name="youEmail" placeholder="ID" required>
+                    <div class="join__box">
+                        <h3>INFOMATION</h3>
+                        <div>
+                            <label class="blind" for="youName">이름</label>
+                            <input type="text" id="youName" name="youEmail" placeholder="이름" required>
+                        </div>
+                        <div class="id_box">
+                            <label class="blind" for="youID">ID</label>
+                            <input type="text" id="youID" name="youEmail" placeholder="ID" required>
+                            <button type="button" class="ID_confirm" onclick="ID_confirm()">중복확인</button>
+                        </div>
+                        <div>
+                            <label class="blind" for="youPass">비밀번호</label>
+                            <input type="password" id="youPass" name="youPass" placeholder="비밀번호" required>
+                        </div>
+                        <div>
+                            <label class="blind" for="youPassc">비밀번호 확인</label>
+                            <input type="password" id="youPassc" name="youPass" placeholder="비밀번호 확인" required>
+                        </div>
+                        <h3>E-mail</h3>
+                        <div>
+                            <label class="blind" for="youEmail">이메일</label>
+                            <input type="youEmail" id="youEmail" name="youEmail" placeholder="E-mail" required>
+                        </div>
+                        <h3>Phone</h3>
+                        <div>
+                            <label class="blind" for="youPhone">휴대폰번호</label>
+                            <input type="text" id="youPhone" name="youPhone" placeholder="전화번호를 입력해주세요." required>
+                        </div>
                     </div>
-                    <div>
-                        <label class="blind" for="youPass">비밀번호</label>
-                        <input type="password" id="youPass" name="youPass" placeholder="비밀번호" required>
-                    </div>
-                    <div>
-                        <label class="blind" for="youPass">비밀번호 확인</label>
-                        <input type="password" id="youPass" name="youPass" placeholder="비밀번호 확인" required>
-                    </div>
-                    <h3>E-mail</h3>
-                    <div>
-                        <label class="blind" for="youEmail">이메일</label>
-                        <input type="youEmail" id="youEmail" name="youEmail" placeholder="E-mail" required>
-                    </div>
-                    <h3>Phone</h3>
-                    <div>
-                        <label class="blind" for="youPhone">휴대폰번호</label>
-                        <input type="text" id="youPhone" name="youPhone" placeholder="전화번호를 입력해주세요." required>
-                    </div>
-                </div>                                  
-                <button class="join__btn" type="sibmit">가입하기</button>
+            </fieldset>                                  
+                <button class="join__btn" type="submit">가입하기</button>
             </form>
         </div>
             
