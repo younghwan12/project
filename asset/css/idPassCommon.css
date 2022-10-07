@@ -5,7 +5,7 @@
 }
 
 .login__popup {
-    width: 500px;
+    width: 380px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -16,25 +16,27 @@
     color: #505050;
 }
 .login__inner {
-    padding: 40px;
+    padding: 30px;
     box-sizing: border-box;
     position: relative;
 }
 .login__header h3 {
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 24px;
+    margin-bottom: 25px;
 }
 .tab_menu {
-    font-size: 1em;
     margin-bottom: 15px;
 }
 .tab_menu em {
     color: #6CC4B3;
 }
 .tab_menu > span {
+    display: inline-block;
     color: #757575;
+    font-size: 14px;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 .tab_menu > span.id {
     margin-right: 5px;
@@ -46,13 +48,13 @@
     color: #6CC4B3;
 }
 .search_contents {
-    padding-top: 1.2rem;
+
 }
 .user_search {
-    font-size: 1.3em;
+    font-size: 16px;
     border-bottom: 1px dashed #6CC4B3;
     border-style: dashed 20px;
-    padding-bottom: 8px;
+    padding-bottom: 5px;
     margin-bottom: 20px;
     color: #757575;
 }

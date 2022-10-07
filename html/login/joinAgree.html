@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>약관 동의</title>
 
-    <link rel="stylesheet" href="../asset/css/common.css">
-    <link rel="stylesheet" href="../asset/css/reset.css">
+    <!-- 공통 CSS -->
+    <link rel="stylesheet" href="../../asset/css/reset.css">
+    <link rel="stylesheet" href="../../asset/css/common.css">
 
 
-    <link rel="stylesheet" href="../asset/css/Agree.css">
+    <link rel="stylesheet" href="../../asset/css/Agree.css">
 </head>
 <body>
     <div class="agree__popup">            
@@ -20,7 +21,7 @@
                 </div>
                 <div>
                     <div class="check">
-                        <input type="checkbox" name="agreeCheck" id="agreeCheck1">
+                        <input type="checkbox" name="agreeCheck" id="agreeCheck1" required>
                         <label for="agreeCheck1">개인정보 수집 동의</label>
                     </div>
                     <div class="desc">
@@ -38,8 +39,8 @@
                 </div>                
                 <div>
                     <div class="check">
-                        <input type="checkbox" name="agreeCheck" id="agreeCheck2">
-                        <label for="agreeCheck2">PHP 개인정보 수집 및 이용 동의합니다.</label>
+                        <input type="checkbox" name="agreeCheck" id="agreeCheck2" required>
+                        <label for="agreeCheck2">PHP 개인정보 수집 동의</label>
                     </div>
                     <div class="desc">
                         <ul>
@@ -57,7 +58,7 @@
                 <div>
                     <div class="check">
                         <input type="checkbox" name="agreeCheck" id="agreeCheck3">
-                        <label for="agreeCheck3">PHP 블로그 이용약관을 동의합니다.</label>
+                        <label for="agreeCheck3">마케팅 정보 수신동의 (선택)</label>
                     </div>
                     <div class="desc">
                         <ul>
@@ -73,10 +74,8 @@
                     <label for="agreeCheckAll">전체 동의하기</label>
                 </div>
                 <div class="agree__footer">
-                    <div class="btn">
-                        <li><a href="#">취소</a></li>
-                        <li><a href="#">확인</a></li>
-                    </div>
+                    <li class="cancel_btn"><a href="loginpopup.html">취소</a></li>
+                    <li class="confirm_btn"><a href="join.html">확인</a></li>
                 </div>
             </div>
             
@@ -87,6 +86,8 @@
         const checkAll = document.querySelector("#agreeCheckAll");
         const check = document.querySelectorAll(".check input");
         const check1 = document.querySelectorAll("#agreeCheck1");
+        const check2 = document.querySelectorAll("#agreeCheck2");
+
 
 
         function selectAll(selectAll){
@@ -95,8 +96,21 @@
             
             checkboxes.forEach((checkbox) => {
                 checkbox.checked = selectAll.checked;
-        })
-}
+            })
+        }
+
+        // function confirmBtn(){
+        //     const agreeFooter = document.querySelector(".agree__footer");
+        //     const confirmBtn = document.querySelector(".cancel_btn a");
+
+        //     if(check1 !== checked){
+        //         confirmBtn.addEventListener("click", (e) => {
+        //             e.preventdefault();
+        //             alert("동의해주세요.")
+        //         });
+
+        //     }
+        // };
 
     </script>
 </body>
