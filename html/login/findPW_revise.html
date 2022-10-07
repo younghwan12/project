@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로그인 팝업</title>
+    <title>P.W 재설정</title>
 
     <!-- 공통 CSS -->
     <link rel="stylesheet" href="../../asset/css/reset.css">
     <link rel="stylesheet" href="../../asset/css/common.css">
     <link rel="stylesheet" href="../../asset/css/idPassCommon.css">
     
-    <!-- 아이디찾기 CSS -->
-    <link rel="stylesheet" href="../../asset/css/Verification.css">
+    <!-- 비밀번호 찾기 CSS -->
+    <link rel="stylesheet" href="../../asset/css/Verification2.css">
 
 
 
@@ -28,26 +28,26 @@
                 <h3>I.D/P.W 찾기</h3>
             </div>
             <div class="tab_menu">
-                <span class="id active">ID</span> <em>|</em> <span class="pass">Password</span>
+                <span class="id">ID</span> <em>|</em> <span class="pass active">Password</span>
                 <div class="search_contents">
-                    <h4 class="user_search">아이디 찾기</h4>
+                    <h4 class="user_search passVer_user2">비밀번호 재설정</h4>
                     <div class="emailVerifi">
                         <form action="" name="" method="post">
-                            <fieldset>
-                                <legend class="blind">이메일 인증</legend>
+                            <fieldset class="passVer_field">
+                                <legend class="blind">비밀번호 재설정</legend>
                                 <div class="contentBox">
-                                    <p>소중한 아이디를 기억해주세요!</p>
-                                    <h5>휴대번호 인증</h5>
+                                    <h5>비밀번호 재설정</h5>
                                     <div class="first_input">
-                                        <label for="youName" class="blind">이름</label>
-                                        <input type="text" name="youName" id="youName" placeholder="이름을 입력해주세요." class="input__style style1" required>
+                                        <label for="youPass" class="blind">새로운 비밀번호</label>
+                                        <input type="password" name="youPass" id="youPass" placeholder="새로운 비밀번호를 입력해주세요." class="input__style style1" required>
                                     </div>
-                                    <div>
-                                        <label for="youPhone" class="blind">휴대전화 번호</label>
-                                        <input type="text" name="youPhone" id="youPhone" placeholder="휴대번호를 입력해주세요." class="input__style" required>
+                                    <div class="second_input2">
+                                        <label for="youPassC" class="blind">비밀번호 확인</label>
+                                        <input type="password" name="youPassC" id="youPassC" placeholder="재확인을 위해 다시 입력해주세요." class="input__style" required>
                                     </div>
+                                    <p>개인정보의 안전을 위해 비밀번호<br> 유출을 조심해주세요.</p>
                                 </div>
-                                <button type="submit" class="confirm__btn">인증완료</button>
+                                <button type="submit" class="confirm__btn">설정 완료</button>
                             </fieldset>
                         </form>
                     </div>
