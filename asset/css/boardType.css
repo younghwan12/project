@@ -13,7 +13,7 @@
     width: 325px;
     padding: 8px 20px;
     font-family: inherit;
-    background: url(../asset/img/arrow.png) no-repeat 95% 50%; /* 네이티브 화살표 대체 */
+    background: url(../img/arrow.png) no-repeat 95% 50%; /* 네이티브 화살표 대체 */
     border: 1px solid #6cc4b3;
     border-radius: 25px;
     font-size: 20px;
