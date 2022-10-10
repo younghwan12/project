@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <section id="headerType" class="header__wrap">
+    <header id="headerType" class="header__wrap">
         <div class="header__inner">
             <div class="header__logo">
                 <a href="#">winimal</a>
@@ -29,8 +29,24 @@
                     <li><a href="#">pet shop</a></li>
                     <li class="login"><a href="#">LOGIN</a></li>
                 </ul>
-            </nav>                
+            </nav>
+            <div class="ham_menu">
+                <input type="checkbox">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>                
         </div>
-    </section>
+    </header>
 </body>
+<script>
+    const btnHam = document.querySelector(".ham_menu");
+    const btnMenu = document.querySelector(".header__menu");
+    const btnMenuList = btnMenu.querySelectorAll("ul li a")
+
+    btnHam.addEventListener("click", () => {
+        btnHam.classList.toggle("active");
+        btnMenu.classList.toggle("active");
+    });
+</script>
 </html>

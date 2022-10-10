@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>약관 동의</title>
+    <title>회원가입 정보 입력 페이지</title>
 
     <!-- 공통 CSS -->
     <link rel="stylesheet" href="../../asset/css/reset.css">
     <link rel="stylesheet" href="../../asset/css/common.css">
     <link rel="stylesheet" href="../../asset/css/font.css">
     <link rel="stylesheet" href="../../asset/css/idPassCommon.css">
+
+    <!-- join -->
     <link rel="stylesheet" href="../../asset/css/join.css">
 </head>
 <body>
@@ -25,6 +27,17 @@
                             <div>
                                 <label class="blind" for="youName">이름</label>
                                 <input type="text" id="youName" name="youEmail" placeholder="이름" required>
+                            </div>
+                            <div class="choice_gender">
+                                <p class="blind" for="youGender">성별</p>
+                                <span>
+                                    <input type="radio" id="youGenderMale" name="youGender" value="male" required>
+                                    <label class="gender" for="youGenderMale">남자</label>
+                                </span>
+                                <span>
+                                    <input type="radio" id="youGenderFemale" name="youGender" value="female" required>
+                                    <label class="gender" for="youGenderFemale">여자</label>
+                                </span>
                             </div>
                             <div class="id_box">
                                 <label class="blind" for="youID">ID</label>
@@ -42,7 +55,7 @@
                             <h3>E-mail</h3>
                             <div>
                                 <label class="blind" for="youEmail">이메일</label>
-                                <input type="youEmail" id="youEmail" name="youEmail" placeholder="E-mail" required>
+                                <input type="email" id="youEmail" name="youEmail" placeholder="E-mail" required>
                             </div>
                             <h3>Phone</h3>
                             <div>
@@ -61,8 +74,18 @@
                 </svg>
             </div>
         </div>
-            
-        </div>
     </div>
+
+    <script>
+        // 닫기 버튼
+        const joinPopup = document.querySelector(".join__popup");
+        const close_btn = document.querySelector(".close_btn");
+
+        close_btn.addEventListener("click", () => {
+            joinPopup.classList.add("close");
+            joinPopup.classList.remove(".show")
+            joinPopup.classList.add(".hide")
+        });
+    </script>
 </body>
 </html>
