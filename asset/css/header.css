@@ -6,12 +6,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 310px;
     box-sizing: border-box;
 }
 .header__logo {
     font-size: 30px;
-    padding-left: 7px;
+    /* padding-left: 7px; */
+    z-index: 1000;
 }
 .header__logo a {
     color: #6cc4b3;
@@ -27,10 +27,10 @@
     padding-top: 20px;
 }
 .header__menu ul {
-    margin-left: 100px;
+    /* margin-left: 100px; */
 }
 .header__menu li {
-    display: inline;
+    display: inline-block;
     border-right: 1px solid #6cc4b3;
 }
 .header__menu li a {
@@ -71,15 +71,15 @@
     height: 36px;
     position: relative;
     cursor: pointer;
+    z-index: 1000;
 }
 .ham_menu div {
     position: absolute;
     right: 0;
     height: 4px;
     border-radius: 2px;
-    background: #6cc4b3;
-    transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6),
-        width 0.2s ease 0.2s;
+    background: #6CC4B3;
+    transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6), width 0.2s ease 0.2s;
 }
 .ham_menu input {
     display: none;
@@ -111,18 +111,23 @@
 .ham_menu.active input + div + div {
     width: 19px;
     transform: translate(6px, 0) rotate(45deg);
-    transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s,
-        width 0.2s ease;
+    transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s, width 0.2s ease;
 }
 .ham_menu.active input + div + div + div {
     width: 19px;
     transform: translate(-6px, 0) rotate(45deg);
-    transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s,
-        width 0.2s ease;
+    transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s, width 0.2s ease;
 }
+
 
 /* media */
 @media (max-width: 1300px) {
+
+}
+@media (max-width: 1024px) {
+    .header__inner {
+        justify-content: center;
+    }
     .header__ham {
         display: block;
     }
@@ -190,5 +195,15 @@
     .ham_menu {
         right: 40px;
         top: 70px;
+    }
+}
+@media (max-width: 768px) {
+    .header__inner {
+        justify-content: space-between;
+    }
+}
+@media (max-width: 480px) {
+    .header__inner {
+        justify-content: space-between;
     }
 }

@@ -2,8 +2,6 @@
 .board__inner {
     border-top: 1px dashed #6cc4b3;
 }
-
-/* 카테고리 및 날짜 선택 */
 .Option {
     margin-top: 50px;
     display: flex;
@@ -70,15 +68,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 input[type="date"]:focus {
     outline: none;
 }
-
-
-/* 테이블 공통 */
-table tbody tr td:nth-child(2) a {
-    color: #505050;
-}
-
-
-/* 인기글 테이블*/
 .board_ranking {
     margin: 50px 0 70px 0;
 }
@@ -99,54 +88,34 @@ table tbody tr td:nth-child(2) a {
     font-size: 20px;
     color: #505050;
 }
-.weekBest {
-    margin-right: 30px;
-    padding-right: 30px;
-    color: #505050;
-    border-right: 1px dashed #6CC4B3;   
-    cursor: pointer;
-}
-.MonthBest {
-    color: #505050;
-    cursor: pointer;
-}
-.ranking__inner table {
-    width: 100%;
-    margin-top: 20px;
-    border-spacing: 0px;
-}
-.ranking__inner > span.active {
-    color: #6CC4B3;
-}
 .board_ranking_tr {
     color: #505050;
-    line-height: 25px;
-}
-.board_ranking_tr:first-child td {
-    padding-top: 1px;
-} 
-.board_ranking_tr:last-child td {
-    padding-bottom: 1px;
 }
 .ranking__inner > table tr td {
     font-size: 18px;
     font-weight: 400;
-    padding: 3px 0;
-    text-align: center;
 }
 .ranking__inner > table tr td:nth-child(2) {
     font-size: 16px;
-    text-align: left;
 }
 .ranking__inner > table tr td:nth-child(3) {
     font-size: 16px;
-    border-left: 1px solid #505050;
-
+}
+.weekBest {
+    margin-right: 30px;
+    padding-right: 30px;
+    border-right: 1px dashed #505050;   
+}
+.MonthBest {
+    color: #6cc4b3;
+}
+.ranking__inner table {
+    width: 100%;
+    margin-top: 20px;
 }
 
 
 
-/* 메인 테이블 */
 .board__table {
     width: 100%;
     padding: 20px;
@@ -155,6 +124,9 @@ table tbody tr td:nth-child(2) a {
 }
 .table {
     width: 100%;
+}
+.table tr {
+
 }
 .table tr td {
     text-align: center;
@@ -176,9 +148,6 @@ table tbody tr td:nth-child(2) a {
     font-size: 16px;
     margin-bottom: 20px;
 }
-.main_table_body tr td:nth-child(3) p {
-    border-left: 1px solid #505050;
-}
 .board_ranking_tr td {
     padding-top: 10px;
 }
@@ -190,8 +159,6 @@ table tbody tr td:nth-child(2) a {
     color: #505050;
     font-size: 18px;
 }
-
-
 .borad__pages {
     margin: 70px 0 20px 0;
 }
@@ -246,53 +213,4 @@ table tbody tr td:nth-child(2) a {
 input:required {
     font-family: 'SCoreDream';
     color: #505050;
-}
-
-.close_btn {
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    cursor: pointer;
-}
-
-.close {
-    display: none;
-}
-
-
-@media (max-width: 1200px){
-
-}
-@media (max-width: 1024px){}
-@media (max-width: 768px){
-    .Option {
-        flex-direction: column;
-    }
-    .Option_category {
-        margin: 0 auto;
-        width: 14rem;
-        font-size: 0.9rem;
-    }
-    .Option_category:first-child {
-        margin: 0 auto 5px auto;
-    }
-    .Option_category select {
-        font-size: 0.9rem;
-    }
-    .Option_category select option {
-        font-size: 0.9rem !important;
-    }
-    #searchOption2 {
-        font-size: 0.9rem;
-    }
-    .board_write {
-        bottom: 48px;
-        font-size: 0.9rem;
-    }
-}
-@media (max-width: 480px){
-    .board_write {
-        font-size: 0.8rem;
-        bottom: 48px;
-    }
 }
