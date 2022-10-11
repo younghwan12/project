@@ -18,15 +18,16 @@
 /* 컨테이너 */
 
 body {
-    font-family: 'SCoreDream';
+    font-family: "SCoreDream";
     font-weight: 400;
+    overflow: hidden;
 }
 input::placeholder {
-    font-family: 'SCoreDream';
+    font-family: "SCoreDream";
     font-weight: 400;
 }
 button {
-    font-family: 'SCoreDream';
+    font-family: "SCoreDream";
     font-weight: 400;
 }
 .container {
