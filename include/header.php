@@ -40,7 +40,7 @@
                     <li><a href="#" class="black"><?=$_SESSION['youName']?>님 환영합니다.┗|｀O′|┛</a></li>
                     <li><a href="../php/logout.php">로그아웃</a></li>
                 <?php } else { ?>                    
-                    <li><a href="#" class="loginBtn">로그인</a></li>
+                    <li><a href="../php/loginpopup.php" class="login">로그인</a></li>
                 <?php } ?>
                 </ul>
             </nav>
@@ -54,10 +54,6 @@
     </header>
 
 <?php 
-    include "../php/loginpopup.php";
-    include "../php/joinAgree.php";
-    include "../php/join.php";
-    // include "../php/join_complete.php";
 ?>
 </body>
 <script src="../asset/js/header_hamburger.js"></script>

@@ -9,10 +9,14 @@
     <link rel="stylesheet" href="../asset/css/common.css">
     <link rel="stylesheet" href="../asset/css/reset.css">
     <link rel="stylesheet" href="../asset/css/login/idPassCommon.css">
+
+    <link rel="stylesheet" href="../asset/css/login/login.css">
+
     
 
 </head>
 <body>
+<?php include "../include/header.php"?>
     <div class="login__popup">
         <div class="login__inner">
             <div class="login__header">
@@ -55,7 +59,7 @@
             </div>
             <div class="login__footer">
                 <div class="footer_btn">
-                    <li><a class="loginpopup_joinBtn">회원가입</a></li>
+                    <li><a href="../php/joinAgree.php" class="loginpopup_joinBtn">회원가입</a></li>
                     <li><a href="findID.php">ID / PW 찾기</a></li>
                 </div>
             </div>

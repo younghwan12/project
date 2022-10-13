@@ -12,12 +12,21 @@
     <link rel="stylesheet" href="../asset/css/font.css">
     <link rel="stylesheet" href="../asset/css/login/idPassCommon.css">
 
+    <style>
+        .join__inner {
+            margin: 0 auto;
+        }
+        .join__inner > h2 {
+            margin-bottom: 20px !important;
+        }
+    </style>
+
     <!-- join -->
     <link rel="stylesheet" href="../asset/css/login/join.css">
 </head>
 <body>
-    <div class="join__popup">            
-        <div class="join__inner">
+<?php include "../include/header.php"?>
+    <div class="join__inner">
             <h2>회원 가입</h2>
             <form action="join_complete.php" name="join" method="post" onSubmit="return joinChecks()">
                 <fieldset>
@@ -82,7 +91,6 @@
                 </svg>
             </div>
         </div>
-    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
@@ -92,6 +100,8 @@
 
         function IDChecking(){
             let youID = $("#youID").val();
+
+            console.log(youID)
 
             if(youID == null || youID == ''){
                 $("#youIDComment").text("아이디를 입력해주세요!!");
@@ -207,12 +217,6 @@
             if(!getYouEmail.test($("#youEmail").val())){
                 $("#youEmailComment").text("이메일 형식에 맞게 작성해주세요!");
                 $("#youEmail").val("");
-                return false;
-            }
-
-            // 이메일 중복 검사
-            if(emailCheck == false){
-                $("#youEmailComment").text("이메일 중복 검사를 해주세요!");
                 return false;
             }
 
