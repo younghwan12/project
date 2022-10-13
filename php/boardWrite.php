@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../asset/css/header.css">
     <link rel="stylesheet" href="../asset/css/board/boardLoginBanner.css">
     <link rel="stylesheet" href="../asset/css/board/boardImageType.css">
-    <link rel="stylesheet" href="../asset/css/board/boardType.css">
+    <link rel="stylesheet" href="../asset/css/board/boardWrite.css">
     <link rel="stylesheet" href="../asset/css/footer.css">
 </head>
 

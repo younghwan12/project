@@ -1,5 +1,6 @@
 <?php
     include "../connect/connect.php";
+    include "../connect/session.php";
 ?>
 
 <!DOCTYPE html>
@@ -34,13 +35,13 @@
                 <ul>
                     <li><a href="#">A.hopsital</a></li>
                     <li><a href="#">disease</a></li>
-                    <li><a href="#">community</a></li>
+                    <li><a href="../php/board.php">community</a></li>
                     <li><a href="#">pet shop</a></li>
                     <?php if( isset($_SESSION['myMemberID']) ){ ?>
-                    <li><a href="#" class="black"><?=$_SESSION['youName']?>님 환영합니다.┗|｀O′|┛</a></li>
-                    <li><a href="../php/logout.php">로그아웃</a></li>
+                    <li><a href="#" class="black">mypage</a></li>
+                    <li><a href="../php/logout.php">logout</a></li>
                 <?php } else { ?>                    
-                    <li><a href="../php/loginpopup.php" class="login">로그인</a></li>
+                    <li><a href="../php/loginpopup.php" class="login">login</a></li>
                 <?php } ?>
                 </ul>
             </nav>

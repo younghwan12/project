@@ -52,7 +52,6 @@
                         $sql = "INSERT INTO myMember (youName, youGender, youID, youPass, youEmail, youPhone , regTime) VALUES('$youName', '$youGender','$youID', '$youPass', '$youEmail', '$youPhone', '$regTime')";
                         $result = $connect -> query($sql);
 
-                        echo $sql;
 
 
                         if($result){
