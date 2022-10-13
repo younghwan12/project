@@ -30,15 +30,15 @@
     /* margin-left: 100px; */
 }
 .header__menu li {
-    display: inline-block;
+    display: inline;
     border-right: 1px solid #6cc4b3;
 }
 .header__menu li a {
     font-weight: 400;
     font-size: 20px;
-    padding: 0px 20px;
-    margin: 0 5px;
+    padding: 0px 25px;
     color: #757575;
+    cursor: pointer;
 }
 .header__menu .login {
     border: none;
@@ -76,7 +76,7 @@
 .ham_menu div {
     position: absolute;
     right: 0;
-    height: 4px;
+    height: 2px;
     border-radius: 2px;
     background: #6CC4B3;
     transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6), width 0.2s ease 0.2s;
@@ -98,7 +98,7 @@
     transform-origin: 0 50%;
 }
 .ham_menu input + div + div + div {
-    bottom: 2px;
+    bottom: 4px;
     right: 0;
     width: 28px;
     transform-origin: 100% 50%;
@@ -194,7 +194,7 @@
     }
     .ham_menu {
         right: 40px;
-        top: 70px;
+        top: 63px;
     }
 }
 @media (max-width: 768px) {
