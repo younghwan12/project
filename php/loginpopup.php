@@ -13,7 +13,7 @@
 
 </head>
 <body>
-    <div class="login__popup close">
+    <div class="login__popup">
         <div class="login__inner">
             <div class="login__header">
                 <h3>winimal Login</h3>
@@ -30,8 +30,8 @@
                         <legend class="blind">로그인 입력폼</legend>
                         <div class="text_input">
                             <div>
-                                <label class="blind" for="youEmail">이메일</label>
-                                <input type="email" name="youEmail" id="youEmail" placeholder="아이디를 입력해주세요." class="input__style" required>
+                                <label class="blind" for="youID"></label>
+                                <input type="id" name="youID" id="youID" placeholder="아이디를 입력해주세요." class="input__style" required>
                             </div>
                             <div>
                                 <label class="blind" for="youPass">비밀번호</label>

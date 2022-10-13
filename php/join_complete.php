@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../asset/css/login/joinCompete.css">
 </head>
 <body>
-    <div class="join__popup close">            
+    <div class="join__popup">            
         <div class="join__inner">
             <h2>회원 가입</h2>
             <div class="complete_contents">
@@ -46,10 +46,9 @@
                         $youEmail = $connect -> real_escape_string(trim($youEmail));
                         $youPhone = $connect -> real_escape_string(trim($youPhone));
 
-                        $youPass = sha1("web".$youPass);
 
                         // 회원가입
-                        $sql = "INSERT INTO myMember (youName, youGender, youID, youPass, youPass, youEmail, regTime) VALUES('$youName', '$youGender','$youID', '$youEmail', '$youPass', '$youPhone', '$regTime')";
+                        $sql = "INSERT INTO myMember (youName, youGender, youID, youPass, youEmail, youPhone , regTime) VALUES('$youName', '$youGender','$youID', '$youPass', '$youEmail', '$youPhone', '$regTime')";
                         $result = $connect -> query($sql);
 
                         if($result){

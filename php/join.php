@@ -16,10 +16,10 @@
     <link rel="stylesheet" href="../asset/css/login/join.css">
 </head>
 <body>
-    <div class="join__popup close">            
+    <div class="join__popup">            
         <div class="join__inner">
             <h2>회원 가입</h2>
-            <form action="join_complete.php" name="join" method="post">
+            <form action="join_complete.php" name="join" method="post" onSubmit="return joinChecks()">
                 <fieldset>
                         <legend class="blind">회원가입</legend>
                         <div class="join__box">
@@ -44,8 +44,8 @@
                             </div>
                             <div class="id_box">
                                 <label class="blind" for="youID">ID</label>
-                                <input type="text" id="youID" name="youEmail" placeholder="ID" required>
-                                <a href="#3" class="ID_confirm">중복확인</a>
+                                <input type="text" id="youID" name="youID" placeholder="ID" required>
+                                <a href="#3" class="ID_confirm" onclick="IDChecking()">중복확인</a>
                                 <p class="msg" id="youIDComment"><!-- * 아이디가 이미 존재합니다. --></p>
                             </div>
                             <div>
@@ -98,7 +98,7 @@
             } else {
                 $.ajax({
                     type : "POST",
-                    url : "JoinCheck.php",
+                    url : "joinCheck.php",
                     data : {"youID": youID, "type": "IDCheck"},
                     dataType : "json",
 

@@ -36,7 +36,12 @@
                     <li><a href="#">disease</a></li>
                     <li><a href="#">community</a></li>
                     <li><a href="#">pet shop</a></li>
-                    <li class="login"><a>LOGIN</a></li>
+                    <?php if( isset($_SESSION['myMemberID']) ){ ?>
+                    <li><a href="#" class="black"><?=$_SESSION['youName']?>님 환영합니다.┗|｀O′|┛</a></li>
+                    <li><a href="../php/logout.php">로그아웃</a></li>
+                <?php } else { ?>                    
+                    <li><a href="#" class="loginBtn">로그인</a></li>
+                <?php } ?>
                 </ul>
             </nav>
             <div class="ham_menu">
