@@ -1,3 +1,13 @@
+<?php
+    include "../connect/connect.php";
+    include "../connect/session.php";
+
+    unset($_SESSION['myMemberID']);
+?>
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -5,43 +15,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로그인 팝업 : 아이디 찾기 완료</title>
+    <title>비밀번호 재설정 완료</title>
 
     <!-- 공통 CSS -->
-    <link rel="stylesheet" href="../../asset/css/reset.css">
-    <link rel="stylesheet" href="../../asset/css/common.css">
-    <link rel="stylesheet" href="../../asset/css/login/idPassCommon.css">
-    <link rel="stylesheet" href="../../asset/css/login/idPassCommon.css">
+    <link rel="stylesheet" href="../asset/css/reset.css">
+    <link rel="stylesheet" href="../asset/css/common.css">
+    <link rel="stylesheet" href="../asset/css/login/idPassCommon.css">
     
-    <!-- 아이디찾음 CSS -->
-    <link rel="stylesheet" href="../../asset/css/login/idPassConfirm.css">
+    <!-- 비밀번호 찾음 CSS -->
+    <link rel="stylesheet" href="../asset/css/login/idPassConfirm.css">
 
+
+
+    <style>
+
+    </style>
 </head>
 <body>
-    <div class="login__popup score inner_height">
+    <div class="login__popup score inner_height2">
         <div class="login__inner">
             <div class="login__header">
                 <h3><a href="findID.html">I.D/P.W 찾기</a></h3>
             </div>
             <div class="tab_menu">
-                <span class="id active">ID</span> <em>|</em> <span class="pass"><a href="findID.html">Password</a></span>
+                <span class="id"><a href="findID.html">ID</a></span> <em>|</em> <span class="pass active">Password</span>
                 <div class="search_contents">
-                    <h4 class="user_search">아이디 찾기</h4>
-                    <div class="id_find">
-                        <figure class="findLogo">
+                    <h4 class="user_search">비밀번호 재설정</h4>
+                    <div class="id_find2">
+                        <figure class="findLogo2">
                             <img src="../../asset/img/loginFind.jpg" alt="">
                         </figure>
-                        <p>당신의 소중한 아이디를 찾았습니다!</p>
+                        <p>비밀번호 재설정이<br> 완료되었습니다!</p>
                     </div>
-                    <div class="searchIdBox">
-                        <h5>ID</h5>
-                        <div class="input__style">귀하의 아이디는 <span class="youID">000</span>입니다.</div>
+                    <div class="searchPassBox">
+                        <p>개인정보의 안전을 위해 비밀번호<br> 유출을 조심해주세요.</p>
                     </div>
                 </div>
                 <div class="go_login">
-                    <a href="loginpopup.html">로그인</a>
+                    <a href="loginpopup.php">로그인</a>
                 </div>
             </div>
+
 
 
             <div class="close_btn">
@@ -55,7 +69,7 @@
     </div>
 
     <!-- 모달 및 탭메뉴 -->
-    <script src="../../asset/js/close_modal.js"></script>
+    <script src="../asset/js/close_modal.js"></script>
 
     <script>
 

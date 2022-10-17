@@ -15,6 +15,10 @@
     <link rel="stylesheet" href="../asset/css/common.css">
     <link rel="stylesheet" href="../asset/css/header.css">
 
+    <link rel="stylesheet" href="../asset/css/login/login.css">
+    <link rel="stylesheet" href="../asset/css/login/Agree.css">
+    <link rel="stylesheet" href="../asset/css/login/join.css">
+    <link rel="stylesheet" href="../asset/css/login/joinCompete.css">
     <style>
                
         
@@ -25,7 +29,7 @@
     <header id="headerType" class="header__wrap">
         <div class="header__inner container">
             <div class="header__logo">
-                <a href="../php/main.php">winimal</a>
+                <a href="../php/board.php">winimal</a>
             </div>
             <nav class="header__menu">
                 <ul>

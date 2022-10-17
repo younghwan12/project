@@ -60,7 +60,7 @@
             <div class="login__footer">
                 <div class="footer_btn">
                     <li><a href="../php/joinAgree.php" class="loginpopup_joinBtn">회원가입</a></li>
-                    <li><a href="findID.php">ID / PW 찾기</a></li>
+                    <li><a href="findIDPass.php">ID / PW 찾기</a></li>
                 </div>
             </div>
             <div class="close_btn">
