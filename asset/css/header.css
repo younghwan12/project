@@ -31,20 +31,19 @@
 }
 .header__menu li {
     display: inline;
-    border-right: 1px solid #6cc4b3;
 }
 .header__menu li a {
     font-weight: 400;
-    font-size: 20px;
-    padding: 0px 25px;
+    font-size: 16px;
+    padding: 0px 20px;
     color: #757575;
     cursor: pointer;
 }
 .header__menu .login {
+    font-size: 14px;
     border: none;
 }
 .header__menu .login a {
-    font-size: 14px;
     padding-right: 0;
 }
 .header__menu li a:hover {
@@ -78,8 +77,9 @@
     right: 0;
     height: 2px;
     border-radius: 2px;
-    background: #6CC4B3;
-    transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6), width 0.2s ease 0.2s;
+    background: #6cc4b3;
+    transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6),
+        width 0.2s ease 0.2s;
 }
 .ham_menu input {
     display: none;
@@ -111,18 +111,18 @@
 .ham_menu.active input + div + div {
     width: 19px;
     transform: translate(6px, 0) rotate(45deg);
-    transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s, width 0.2s ease;
+    transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s,
+        width 0.2s ease;
 }
 .ham_menu.active input + div + div + div {
     width: 19px;
     transform: translate(-6px, 0) rotate(45deg);
-    transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s, width 0.2s ease;
+    transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s,
+        width 0.2s ease;
 }
-
 
 /* media */
 @media (max-width: 1300px) {
-
 }
 @media (max-width: 1024px) {
     .header__inner {
