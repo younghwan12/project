@@ -84,10 +84,10 @@
                 <label for="agreeCheckAll">전체 동의하기</label>
             </div>
             <div class="agree__footer">
-                <li class="cancel_btn">취소</li>
-                <li class="confirm_btn"><a href="../php/join.php">확인</a></li>
+                <li class="cancel_btn"><a href="main.php">취소</a></li>
+                <li class="confirm_btn">확인</li>
             </div>
-            <div class="close_btn"><a href="board.php">
+            <div class="close_btn"><a href="main.php">
                 <svg width="25" height="25" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z" fill="#ffffff"/>
                     <path d="M5.33334 4.66675L14.6667 15.3334" stroke="#6CC4B3" stroke-linecap="round"/>
@@ -107,7 +107,6 @@
         // 공통 선택자
         const agree_checkAll = document.querySelector("#agreeCheckAll");
         const agree_check = document.querySelectorAll(".check input");
-
 
         const aggre_checkArray = [...agree_check];
 
@@ -134,16 +133,29 @@
         // 필수 동의 체크시 확인 버튼 활성화
         function confirmButton(){
             const agree_conBtn = document.querySelector(".confirm_btn");
+            let agreeBtnContents = agree_conBtn.innerText;
             if(aggre_checkArray[0].checked == true && aggre_checkArray[1].checked){
-                agree_conBtn.classList.add("confirm_btnC")
+                agreeBtnContents = "<a href='../php/join.php'>" + agreeBtnContents + "</a>";
+                agree_conBtn.innerHTML = agreeBtnContents
+                
 
-                agreeToJoin(agree_conBtn);
             } else if(aggre_checkArray[0].checked == false || aggre_checkArray[1].checked == false){
-                agree_conBtn.classList.remove("confirm_btnC")
+                agreeBtnContents.replace("<a href='join.html'>", "");
+                agree_conBtn.innerHTML = agreeBtnContents
             }
         }
         confirmButton();
-
+        // function confirmButton() {
+        //     const btn = document.querySelector(".confirm_btn");
+        //     let btnContents = btn.innerText;
+        //     if (checkArray[0].checked == true && checkArray[1].checked) {
+        //         btnContents = "<a href='join.html'>" + btnContents + "</a>";
+        //         btn.innerHTML = btnContents
+        //     } else {
+        //         btnContents.replace("<a href='join.html'>", "");
+        //         btn.innerHTML = btnContents
+        //     };
+        // };
         // // alert 창
         // const agree_conBtn = document.querySelector(".confirm_btn");
         // const agree_require = document.querySelector(".agree_require");
@@ -152,13 +164,11 @@
         //         agree_require.classList.remove("close");
         //     }
         // });
-
         // function requireBtn(click) {
         //     click.addEventListener("click", () => {
         //         agree_require.classList.add("close");
         //     });
         // }
-
 
     </script>
 </body>

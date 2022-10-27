@@ -1,6 +1,14 @@
 <?php
     include "../connect/connect.php";
     include "../connect/session.php";
+
+
+    $myMemberID = $_SESSION['myMemberID'];
+
+    $mySql = "SELECT * FROM myMember WHERE myMemberID = {$myMemberID}";
+    $myResult = $connect -> query($mySql);
+
+    $myInfo = $myResult -> fetch_array(MYSQLI_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -32,13 +40,13 @@
         <h2 class="blind">loginBanner</h2>
         <div class="lB__inner">
             <figure class="MyprofileL">
-                <img src="../asset/img/profile.png" alt="프로필">
+                <img src="../asset/img/profile/<?=$myInfo['youImgFile']?>" alt="프로필사진">
                     <figcaption><?=$_SESSION['youName']?>님 어서오세요!</figcaption>
                 <a href="../php/logout.php">LOGOUT</a>
             </figure>
             <div class="Myprofile">
                 <ul>
-                    <li>최근 접속 기록 : 00/ 00/ 00</li>
+                    <li>가입일 : <?=date('Y-m-d', $myInfo['regTime'] )?></li>
                     <li><a href="#">나의 정보</a></li>
                     <li><a href="#">나의 반려견</a></li>
                     <li>나의 글 : 00개</li>
@@ -70,16 +78,17 @@
                     </div>
                     <div class="border_titleCate">
                         <div class="selectBox">
+                            <label for="boardCate"></label>
                             <select name="boardCate" id="boardCate">
                                 <option value="카테고리1">카테고리1</option>
                                 <option value="카테고리2">카테고리2</option>
                                 <option value="카테고리3">카테고리3</option>
                             </select>
                         </div>
-                        <div class="imgAttachBox">
+                        <!-- <div class="imgAttachBox">
                             <label for="boardImg">Image</label>
                             <input type="file" name="boardImg" id="boardImg" accept=".jpg, .jpeg, .png, .gif, .webp" placeholder="jpg, jpeg, png, gif, webp 파일만 첨부해주세요.">
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="board_writeBox">
@@ -89,10 +98,9 @@
                 <div class="board_btn">
                     <button type="submit" value="저장하기">작성 완료</button>
                     <span>|</span>
-                    <span><a href="board.html">취소</a></span>
+                    <span><a href="board.php">취소</a></span>
                 </div>
             </form>
-
         </div>        
     </section>
     <!-- //boardWrite -->
